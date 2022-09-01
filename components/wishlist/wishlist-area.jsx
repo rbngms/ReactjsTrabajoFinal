@@ -16,7 +16,7 @@ const WishlistArea = () => {
             <div className="col-12">
               {wishlist.length === 0 &&
                 <div className='text-center'>
-                  <h3>No wishlist product</h3>
+                  <h3>No hay productos en la lista</h3>
                 </div>
               }
               {wishlist.length > 0 && <form onSubmit={handleSubmit}>
@@ -24,12 +24,12 @@ const WishlistArea = () => {
                   <table className="table">
                     <thead>
                       <tr>
-                        <th className="product-thumbnail">Images</th>
-                        <th className="cart-product-name">Product</th>
-                        <th className="product-price">Unit Price</th>
-                        <th className="product-quantity">Quantity</th>
+                        <th className="product-thumbnail">Imagen</th>
+                        <th className="cart-product-name">Producto</th>
+                        <th className="product-price">Precio unitario</th>
+                        <th className="product-quantity">Cantidad</th>
                         <th className="product-subtotal">Total</th>
-                        <th className="product-remove">Remove</th>
+                        <th className="product-remove">Retirar</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -49,7 +49,7 @@ const WishlistArea = () => {
                           </td>
                           <td className="product-price"><span className="amount">${product.price}</span></td>
                           <td className="product-quantity">
-                            <button onClick={() => dispatch(cart_product(product))} className="os-btn os-btn-black" type="submit">Add TO Cart</button>
+                            <button onClick={() => dispatch(cart_product(product))} className="os-btn os-btn-black" type="submit">Agregar al carrito</button>
                           </td>
                           <td className="product-subtotal">
                             <span className="amount">${product.price}</span>
